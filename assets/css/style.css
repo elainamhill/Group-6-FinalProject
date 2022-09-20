@@ -5,3 +5,7 @@ body {
     color: var(--color-fg-default);
     background-color: var(--color-canvas-default);
 }
+
+.btn-primary {
+    --bs-btn-font-weight: 600;
+}
