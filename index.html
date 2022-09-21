@@ -5,32 +5,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="asset/CSS/style.css"> 
-        <title>Task List</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+        <title>Task Planner</title>
     </head>
 
     <body>
-        <h1 class="text-bg-light p-3 text-center">Task List</h1>
+        <h1 class="text-bg-light p-3 text-center">Task Planner</h1>
         
         <section  class="p-3 text-justify">
-        <h2>Add New Task</h2> 
+        <h2>New Task</h2> 
         </section>
 
         <section class="p-3 text-justify">
-            <div class="row">
-                <h5>Task Name </h5> 
+            <div class="row"> 
                 <div class="col-md-12">
-                    <label for="inputCity" class="form-label"></label>
+                    <label for="inputCity" class="form-label"><h5>Name</h5></label>
                     <input type="text" class="form-control" id="inputCity">
                     <div class="col-md-12"> </div> 
             </div>
         </section>
 
         <section class="p-3 text-justify">
-            <div class="row">
-                <h5>Task Description</h5> 
+            <div class="row"> 
                 <div class="col-md-12">
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <label for="exampleFormControlTextarea1" class="form-label"><h5>Description</h5></label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     <div class="col-md-12"></div> 
                 </div>
@@ -38,23 +36,24 @@
 
         <section>
             <div class="row p-3 text-justify">
-                <div class="col-sm-6"><h5>Assigned To:</h5>
-                    <label for="inputCity" class="form-label"></label>
+                <div class="col-sm-6">
+                    <label for="inputCity" class="form-label"><h5>Assign To</h5></label>
                     <input type="text" class="form-control" id="inputCity">
                 </div>
-                <div class="col-sm-6"><h5>Due Date</h5>
-                    <label for="inputCity" class="form-label"></label>
-                    <br>
-                    <input type="datetime-local" id="Test_DatetimeLocal">
+                <div class="col-sm-6">
+                    <label for="due_date" class="form-label"><h5>Due Date</h5></label>
+                    <input type="datetime-local" class ="form-control" id="due_date">
                 </div>
             </div>
             <div class="row p-3 text-justify">
-                <button type="button" class="btn btn-primary" style="--bs-btn-padding-y: 1em; --bs-btn-padding-x: 5rem; --bs-btn-font-size: .75rem;">ADD TASK</button>
+                <div class="d-grid">
+                    <button type="button" class="btn btn-primary">ADD TASK</button>
+                </div>
             </div>               
         </section> 
 
         <footer class="p-3 text-justify">  
-            <section  class="p-3">
+            <section class="p-3">
                 <h2>Tasks</h2> 
             </section>
             <ul class="list-group p-3 text-justify">
