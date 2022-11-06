@@ -13,3 +13,15 @@ body {
 #form_alert {
     display: none;
 }
+
+.form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+    color: #fff;
+}
+
+.invalid-feedback {
+    color: #ff606e;
+}
+
+.valid-feedback{
+    color: #2acc80;
+ }
