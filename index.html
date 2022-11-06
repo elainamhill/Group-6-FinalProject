@@ -14,29 +14,33 @@
 
         <section class="mx-5 p-3 text-justify"> 
             <h2 class="py-2">New Task</h2>
-            <form name="taskForm" onsubmit="return validFormFieldInput()">
+            <form class="require-valid" name="taskForm" onsubmit="return validFormFieldInput()" novalidate>
                 <div class="row py-3">
                     <div class="col-md-12">
                         <label for="input_taskName" class="form-label"><h5>Name</h5></label>
-                        <input type="text" class="form-control" id="input_taskName">
+                        <input type="text" class="form-control" id="input_taskName" required>
+                        <div class="invalid-feedback">Task name is required.</div>
                     </div> 
                 </div>
 
                 <div class="row py-3"> 
                     <div class="col-md-12">
                         <label for="input_description" class="form-label"><h5>Description</h5></label>
-                        <textarea class="form-control" id="input_description" rows="3"></textarea>
+                        <textarea class="form-control" id="input_description" rows="3" required></textarea>
+                        <div class="invalid-feedback">Task description is required.</div>
                     </div>
                 </div>     
 
                 <div class="row">
                     <div class="col-sm-6 py-3">
                         <label for="input_assign" class="form-label"><h5>Assign To</h5></label>
-                        <input type="text" class="form-control" id="input_assign">
+                        <input type="text" class="form-control" id="input_assign" required>
+                        <div class="invalid-feedback">Task assignment is required.</div>
                     </div>
                     <div class="col-sm-6 py-3">
                         <label for="input_dueDate" class="form-label"><h5>Due Date</h5></label>
-                        <input type="datetime-local" class ="form-control" id="input_dueDate">
+                        <input type="datetime-local" class ="form-control" id="input_dueDate" required>
+                        <div class="invalid-feedback">Task due date is required.</div>
                     </div>
                 </div>
                 
