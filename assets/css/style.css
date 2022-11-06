@@ -9,3 +9,7 @@ body {
 .btn-primary {
     --bs-btn-font-weight: 600;
 }
+
+#form_alert {
+    display: none;
+}
