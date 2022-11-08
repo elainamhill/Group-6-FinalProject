@@ -64,3 +64,9 @@ function sendAlert(alert) {
     alert.style.display = "block";
     setTimeout(() => {alert.style.display = "none"}, 5000);
 }
+
+const testTaskManager = new TaskManager();
+console.log(testTaskManager);
+
+testTaskManager.addTask('Dishes', 'Do them and put them away', 'Me', '2022-11-10T14:10');
+console.log(testTaskManager);
