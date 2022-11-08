@@ -1,6 +1,8 @@
 // Test HTML connection
 // console.log('JavaScript connected!');
 
+const formTaskManager = new TaskManager();
+
 const validFormFieldInput = () => {
 
     // Input element variables
@@ -31,32 +33,14 @@ const validFormFieldInput = () => {
 
     if(!form.checkValidity()) {
         sendAlert(formAlert);
-        return false;
+    } else {
+        formTaskManager.addTask(name, description, assign, due);
+        console.log(formTaskManager);
+        form.classList.remove('was-validated');
+        form.reset();
     }
 
-    /* 
-    if (name === "") {
-        formAlert.style.display = "block";
-        return false;
-    }
-
-    if (description === "") {
-        formAlert.style.display = "block";
-        return false;
-    }
-
-    if (assign === "") {
-        formAlert.style.display = "block";
-        return false;
-    }
-
-    if (due === "") {
-        formAlert.style.display = "block";
-        return false;
-    } */
-
-    formAlert.style.display = "none";
-    return true;
+    return false;
 }
 
 // Show alert, close after 5 seconds
@@ -64,9 +48,3 @@ function sendAlert(alert) {
     alert.style.display = "block";
     setTimeout(() => {alert.style.display = "none"}, 5000);
 }
-
-const testTaskManager = new TaskManager();
-console.log(testTaskManager);
-
-testTaskManager.addTask('Dishes', 'Do them and put them away', 'Me', '2022-11-10T14:10');
-console.log(testTaskManager);
