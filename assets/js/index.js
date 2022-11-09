@@ -1,6 +1,8 @@
 // Test HTML connection
 // console.log('JavaScript connected!');
 
+const formTaskManager = new TaskManager();
+
 const validFormFieldInput = () => {
 
     // Input element variables
@@ -31,32 +33,14 @@ const validFormFieldInput = () => {
 
     if(!form.checkValidity()) {
         sendAlert(formAlert);
-        return false;
+    } else {
+        formTaskManager.addTask(name, description, assign, due);
+        console.log(formTaskManager);
+        form.classList.remove('was-validated');
+        form.reset();
     }
 
-    /* 
-    if (name === "") {
-        formAlert.style.display = "block";
-        return false;
-    }
-
-    if (description === "") {
-        formAlert.style.display = "block";
-        return false;
-    }
-
-    if (assign === "") {
-        formAlert.style.display = "block";
-        return false;
-    }
-
-    if (due === "") {
-        formAlert.style.display = "block";
-        return false;
-    } */
-
-    formAlert.style.display = "none";
-    return true;
+    return false;
 }
 
 // Show alert, close after 5 seconds
